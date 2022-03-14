@@ -1,7 +1,4 @@
-import {
-  assertEquals,
-  assertThrows,
-} from "https://deno.land/std@0.129.0/testing/asserts.ts";
+import { asserts } from "./deps.ts";
 import extractTrack from "./extractTracks.ts";
 
 Deno.test("Extracts tracks", () => {
@@ -24,7 +21,7 @@ Deno.test("Extracts tracks", () => {
     },
   ];
   for (const { text, expected } of cases) {
-    assertEquals(extractTrack(text), expected);
+    asserts.assertEquals(extractTrack(text), expected);
   }
   const result = extractTrack("Hello I am a message");
 });
