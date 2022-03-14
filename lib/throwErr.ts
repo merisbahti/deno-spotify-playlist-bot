@@ -1,3 +1,3 @@
-export const throwErr = (message: string) => {
-  throw new Error(message);
+export const throwErr = (message?: string) => {
+  throw new Error(message ?? "Unknown error.");
 };
